@@ -1,0 +1,28 @@
+{
+  "name": "stylelint-config-zzjtnb-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@7.14.2",
+  "author": "zzjtnb(https://github.com/zzjtnb)",
+  "license": "MIT",
+  "homepage": "https://github.com/zzjtnb/stylelint-config#readme",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "lint:eslint": "eslint . --fix",
+    "lint:stylelint": "stylelint \"**/*.(css|sass|vue|html|xml|svelte|astro|php)\" --fix",
+    "lint": "pnpm lint:eslint && pnpm lint:stylelint",
+    "commit": "git-cz",
+    "clear": "rimraf 'packages/*/{node_modules}' && rimraf node_modules",
+    "bumpp": "bumpp package.json packages/*/package.json --commit --push --tag",
+    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish "
+  },
+  "devDependencies": {
+    "bumpp": "^8.2.1",
+    "eslint": "^8.26.0",
+    "eslint-config-zzjtnb": "^0.0.1",
+    "rimraf": "^3.0.2",
+    "stylelint": "^14.14.1",
+    "stylelint-config-zzjtnb": "workspace:*"
+  }
+}

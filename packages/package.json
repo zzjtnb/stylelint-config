@@ -1,0 +1,35 @@
+{
+  "name": "stylelint-config-zzjtnb",
+  "version": "0.0.0",
+  "description": "Stylelint configuration aimed to have balanced aspects.",
+  "author": "zzjtnb(https://github.com/zzjtnb)",
+  "license": "MIT",
+  "homepage": "https://github.com/zzjtnb/stylelint-config#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzjtnb/stylelint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zzjtnb/stylelint-config/issues"
+  },
+  "keywords": [
+    "stylelint",
+    "stylelint-config",
+    "standard",
+    "scss"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "peerDependencies": {
+    "stylelint": "^14.5.1"
+  },
+  "dependencies": {
+    "postcss-html": "^1.5.0",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-idiomatic-order": "^9.0.0",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard-scss": "^6.1.0"
+  }
+}
