@@ -3,7 +3,7 @@
 [![npm](https://img.shields.io/npm/v/stylelint-config-zzjtnb?color=a1b858&label=)](https://npmjs.com/package/stylelint-config-zzjtnb)
 
 - Auto fix for formatting (aimed to be used standalone without Prettier)
-- Lint for css,sass,vue,html,xml,svelte,astro,php
+- Lint for css,scss,vue,html,xml,svelte,astro,php
 
 ## Usage
 
