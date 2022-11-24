@@ -2,7 +2,7 @@
   "name": "stylelint-config-zzjtnb-monorepo",
   "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@7.14.2",
+  "packageManager": "pnpm@7.17.0",
   "author": "zzjtnb(https://github.com/zzjtnb)",
   "license": "MIT",
   "homepage": "https://github.com/zzjtnb/stylelint-config#readme",
