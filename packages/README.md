@@ -13,7 +13,7 @@
 pnpm add -D stylelint stylelint-config-zzjtnb
 ```
 
->.stylelintrc.cjs
+>.stylelintrc.js
 
 For all:
 
@@ -34,8 +34,8 @@ For example:
 ```json
 {
   "scripts": {
-    "lint": "stylelint \"**/*.(css|sass|vue|html|xml|svelte|astro|php)\" ",
-    "lint:fix": "stylelint \"**/*.(css|sass|vue|html|xml|svelte|astro|php)\" --fix"
+    "lint": "stylelint \"**/*.(css|scss|vue|html|xml|svelte|astro|php)\" ",
+    "lint:fix": "stylelint \"**/*.(css|scss|vue|html|xml|svelte|astro|php)\" --fix"
   }
 }
 ```
@@ -52,7 +52,7 @@ Install [VS Code Stylelint extension](https://marketplace.visualstudio.com/items
     "source.fixAll.stylelint": true
   },
   "stylelint.validate": [
-    "css", "sass", "vue", "html", "xml", "svelte", "astro", "php"
+    "css", "scss", "vue", "html", "xml", "svelte", "astro", "php"
   ]
 }
 ```
