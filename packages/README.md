@@ -44,7 +44,7 @@ For example:
 
 Install [VS Code Stylelint extension](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) and create `.vscode/settings.json`
 
-```jsonc
+```json
 {
   "prettier.enable": false,
   "editor.formatOnSave": false,

@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-  'stylelint-config-zzjtnb'
+    'stylelint-config-zzjtnb',
   ],
   rules: {},
-};
+}
