@@ -31,11 +31,26 @@ const num = 0
     &.is-animating {
       background-color: #fffdec;
     }
-    .cell-1 { width: 10%; }
-    .cell-2 { width: 20%; }
-    .cell-3 { width: 30%; }
-    .cell-4 { width: 40%; }
-    .cell-5 { width: 50%; }
+
+    .cell-1 {
+      width: 10%;
+    }
+
+    .cell-2 {
+      width: 20%;
+    }
+
+    .cell-3 {
+      width: 30%;
+    }
+
+    .cell-4 {
+      width: 40%;
+    }
+
+    .cell-5 {
+      width: 50%;
+    }
   }
 }
 </style>

@@ -43,19 +43,23 @@ mklink
 #         Target  指定新链接引用的路径
 #                 (相对或绝对)
 ```
+
 创建目录符号链接.默认为文件
+
 ```bash
 mklink /d .\README.md .\packages\README.md
 ```
+
 删除的话直接删除 Link(.\README.md)
 
-
 查看所有配置
+
 ```bash
 # Print the configuration for the given file
 # 打印给定文件的配置
 stylelint --print-config file.js > stylelintconifg.json
 ```
+
 ```bash
 stylelint --print-config file.css > ./tests/config/css.json
 stylelint --print-config file.scss > ./tests/config/scss.json

@@ -13,19 +13,18 @@
 pnpm add -D stylelint stylelint-config-zzjtnb
 ```
 
->.stylelintrc.js
+>stylelint.config.js
 
 For all:
 
 ```js
 module.exports = {
   extends: [
-    'stylelint-config-zzjtnb'
+    'stylelint-config-zzjtnb',
   ],
   rules: {},
 }
 ```
-
 
 ### Add script for package.json
 
@@ -34,8 +33,8 @@ For example:
 ```json
 {
   "scripts": {
-    "lint": "stylelint \"**/*.(css|scss|vue|html|xml|svelte|astro|php)\" ",
-    "lint:fix": "stylelint \"**/*.(css|scss|vue|html|xml|svelte|astro|php)\" --fix"
+    "lint:stylelint": "stylelint \"**/*.{css,scss,vue,html,xml,svelte,astro,php}\"",
+    "lint:stylelint-fix": "stylelint \"**/*.{css,scss,vue,html,xml,svelte,astro,php}\" --fix"
   }
 }
 ```
@@ -49,7 +48,7 @@ Install [VS Code Stylelint extension](https://marketplace.visualstudio.com/items
   "prettier.enable": false,
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.stylelint": true
+    "source.fixAll.stylelint": "explicit"
   },
   "stylelint.validate": [
     "css", "scss", "vue", "html", "xml", "svelte", "astro", "php"

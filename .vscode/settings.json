@@ -1,29 +1,27 @@
 {
+  // 禁用默认格式化程序，改用 eslint
   "prettier.enable": false,
   "editor.formatOnSave": false,
+  // 自动修复
   "editor.codeActionsOnSave": {
-    // 所有可自动修复的 ESlint 错误都将在保存时修复
-    "source.fixAll.eslint": true,
-    // 所有可自动修复的 Stylelint 错误都将在保存时修复
-    "source.fixAll.stylelint": true
+    "source.fixAll.eslint": "always",
+    "source.fixAll.stylelint": "always",
+    "source.organizeImports": "never"
   },
-  // 包含下方后缀的文件
-  "eslint.validate": [
-    "javascript",
-    "typescript",
-    "html",
-    "vue",
-    "markdown",
-    "json",
-    "jsonc",
-    "yaml",
-    "yml"
+  // 将您的IDE中的风格规则设为静默,但仍然自动修复它们
+  "eslint.rules.customizations": [
+    { "rule": "style/*", "severity": "off" },
+    { "rule": "format/*", "severity": "off" },
+    { "rule": "*-indent", "severity": "off" },
+    { "rule": "*-spacing", "severity": "off" },
+    { "rule": "*-spaces", "severity": "off" },
+    { "rule": "*-order", "severity": "off" },
+    { "rule": "*-dangle", "severity": "off" },
+    { "rule": "*-newline", "severity": "off" },
+    { "rule": "*quotes", "severity": "off" },
+    { "rule": "*semi", "severity": "off" }
   ],
-  // specifying which files to validate
-  // 指定要验证的文件
-  "stylelint.validate": [
-    "css",
-    "scss",
-    "vue"
-  ]
+  // 为所有支持的语言启用 eslint
+  "eslint.validate": ["javascript", "typescript", "vue", "html", "markdown", "json", "jsonc", "yaml", "toml", "gql", "graphql", "astro"],
+  "stylelint.validate": ["css", "scss", "vue", "html", "xml", "svelte", "astro", "php"]
 }
