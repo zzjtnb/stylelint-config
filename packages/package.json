@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-zzjtnb",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Stylelint configuration aimed to have balanced aspects.",
   "author": "zzjtnb(https://github.com/zzjtnb)",
   "license": "MIT",
@@ -22,13 +22,15 @@
   "files": [
     "index.js"
   ],
+  "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+  },
   "peerDependencies": {
-    "stylelint": ">=15.0.0"
+    "stylelint": ">=16.5.0"
   },
   "dependencies": {
-    "postcss-html": "^1.5.0",
     "stylelint-config-html": "^1.1.0",
-    "stylelint-config-idiomatic-order": "^9.0.0",
-    "stylelint-config-standard-scss": "^6.1.0"
+    "stylelint-config-idiomatic-order": "^10.0.0",
+    "stylelint-config-standard-scss": "^13.1.0"
   }
 }
