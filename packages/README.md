@@ -13,7 +13,7 @@
 pnpm add -D stylelint stylelint-config-zzjtnb
 ```
 
->stylelint.config.js
+> stylelint.config.js
 
 For all:
 
@@ -51,14 +51,19 @@ Install [VS Code Stylelint extension](https://marketplace.visualstudio.com/items
     "source.fixAll.stylelint": "explicit"
   },
   "stylelint.validate": [
-    "css", "scss", "vue", "html", "xml", "svelte", "astro", "php"
+    "css",
+    "scss",
+    "vue",
+    "html",
+    "xml",
+    "svelte",
+    "astro",
+    "php"
   ]
 }
 ```
 
 ### Related
-
-- [eslint-config-zzjtnb](https://www.npmjs.com/package/eslint-config-zzjtnb)
 
 ## License
 

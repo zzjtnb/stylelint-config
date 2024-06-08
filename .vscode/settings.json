@@ -23,5 +23,19 @@
   ],
   // 为所有支持的语言启用 eslint
   "eslint.validate": ["javascript", "typescript", "vue", "html", "markdown", "json", "jsonc", "yaml", "toml", "gql", "graphql", "astro"],
-  "stylelint.validate": ["css", "scss", "vue", "html", "xml", "svelte", "astro", "php"]
+  "stylelint.validate": [
+    "css",
+    "scss",
+    "vue",
+    "html",
+    "xml",
+    "svelte",
+    "astro",
+    "php"
+  ],
+  "cSpell.words": [
+    "antfu",
+    "bumpp",
+    "zzjtnb"
+  ]
 }

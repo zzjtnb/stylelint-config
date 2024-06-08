@@ -1,7 +1,11 @@
+# 记录
+
+## git
+
 The default branch has been renamed!
 If you have a local clone, you can update it by running the following commands.
 
-```
+```bash
 git branch -m master main
 git fetch origin
 git branch -u origin/main main
@@ -28,18 +32,21 @@ git branch -M master
 git push -u origin master
 ```
 
+## 软链接
+
 建立软链接
->windows cmd
+
+> windows cmd
 
 ```bash
 mklink
 # MKLINK [[/D] | [/H] | [/J]] Link Target
 
-#         /D      创建目录符号链接。默认为文件
-#                 符号链接。
-#         /H      创建硬链接而非符号链接。
-#         /J      创建目录联接。
-#         Link    指定新的符号链接名称。
+#         /D      创建目录符号链接.默认为文件
+#                 符号链接.
+#         /H      创建硬链接而非符号链接.
+#         /J      创建目录联接.
+#         Link    指定新的符号链接名称.
 #         Target  指定新链接引用的路径
 #                 (相对或绝对)
 ```
@@ -51,6 +58,8 @@ mklink /d .\README.md .\packages\README.md
 ```
 
 删除的话直接删除 Link(.\README.md)
+
+## stylelint
 
 查看所有配置
 
@@ -64,4 +73,20 @@ stylelint --print-config file.js > stylelintconifg.json
 stylelint --print-config file.css > ./tests/config/css.json
 stylelint --print-config file.scss > ./tests/config/scss.json
 stylelint --print-config file.vue > ./tests/config/vue.json
+```
+
+## pnpm
+
+```bash
+# 查看当前登录的npm用户
+pnpm whoami
+
+# 登陆
+pnpm login
+
+# 发布
+pnpm -r publish
+
+# 发布时忽略git提交
+pnpm -r publish --no-git-checks
 ```

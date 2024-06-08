@@ -1,8 +1,9 @@
 module.exports = {
-  // 你可以继承一个已存在的配置数组,数组中的每一项都优先于下一项.
-  // 所以,第一项覆盖所有,第二项覆盖除了第一项之外的所有项,最后一项被其他所有项覆盖,等等
+  // 你可以继承一个已存在的配置数组,数组中的每个项都优先于前一项.
+  // 因此第二项覆盖第一项中的规则,第三项覆盖第一项和第二项中的规则,依此类推,最后一项覆盖其他所有内容
   extends: [
     'stylelint-config-idiomatic-order',
+    'stylelint-config-standard',
     'stylelint-config-standard-scss',
     'stylelint-config-html',
   ],
