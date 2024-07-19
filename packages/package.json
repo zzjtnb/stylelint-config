@@ -22,13 +22,11 @@
   "files": [
     "index.js"
   ],
-  "engines": {
-    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
-  },
   "peerDependencies": {
-    "stylelint": ">=16.5.0"
+    "stylelint": ">=16"
   },
   "dependencies": {
+    "postcss-markdown": "^1.2.0",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-idiomatic-order": "^10.0.0",
     "stylelint-config-standard": "^36.0.0",

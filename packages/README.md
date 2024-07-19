@@ -3,7 +3,7 @@
 [![npm](https://img.shields.io/npm/v/stylelint-config-zzjtnb?color=a1b858&label=)](https://npmjs.com/package/stylelint-config-zzjtnb)
 
 - Auto fix for formatting (aimed to be used standalone without Prettier)
-- Lint for css,scss,vue,html,xml,svelte,astro,php
+- Lint for css,scss,vue,html,xml,svelte,astro,php,markdown
 
 ## Usage
 
@@ -33,8 +33,8 @@ For example:
 ```json
 {
   "scripts": {
-    "lint:stylelint": "stylelint \"**/*.{css,scss,vue,html,xml,svelte,astro,php}\"",
-    "lint:stylelint-fix": "stylelint \"**/*.{css,scss,vue,html,xml,svelte,astro,php}\" --fix"
+    "lint:stylelint": "stylelint \"**/*.{css,scss,vue,html,xml,svelte,astro,php,md}\"",
+    "lint:stylelint-fix": "stylelint \"**/*.{css,scss,vue,html,xml,svelte,astro,php,md}\" --fix"
   }
 }
 ```
@@ -58,7 +58,8 @@ Install [VS Code Stylelint extension](https://marketplace.visualstudio.com/items
     "xml",
     "svelte",
     "astro",
-    "php"
+    "php",
+    "markdown"
   ]
 }
 ```

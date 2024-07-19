@@ -31,7 +31,8 @@
     "xml",
     "svelte",
     "astro",
-    "php"
+    "php",
+    "markdown"
   ],
   "cSpell.words": [
     "antfu",

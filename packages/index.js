@@ -8,4 +8,14 @@ module.exports = {
     'stylelint-config-html',
   ],
   rules: {},
+  ignoreFiles: [
+    '**/dist/**/*',
+    '**/**/stats.html',
+  ],
+  overrides: [
+    {
+      files: ['*.md', '**/*.md'],
+      customSyntax: 'postcss-markdown',
+    },
+  ],
 }

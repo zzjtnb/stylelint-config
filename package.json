@@ -6,14 +6,16 @@
   "license": "MIT",
   "homepage": "https://github.com/zzjtnb/stylelint-config#readme",
   "engines": {
-    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+    "node": ">=22",
+    "pnpm": ">=9"
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "lint:eslint": "eslint \"**/**/*.{js,ts,cjs,mjs,vue,html,md,json,jsonc}\"",
-    "lint:eslint-fix": "eslint \"**/**/*.{js,ts,cjs,mjs,vue,html,md,json,jsonc}\" --fix",
-    "lint:stylelint": "stylelint \"**/*.{css,scss,vue,html,xml,svelte,astro,php}\"",
-    "lint:stylelint-fix": "stylelint \"**/*.{css,scss,vue,html,xml,svelte,astro,php}\" --fix",
+    "lint:eslint": "eslint \"**/*.{js,ts,cjs,mjs,vue,html,md,json,jsonc,yaml}\"",
+    "lint:eslint-fix": "eslint \"**/*.{js,ts,cjs,mjs,vue,html,md,json,jsonc,yaml}\" --fix",
+    "lint:eslint-debug": "eslint \"**/*.{js,ts,cjs,mjs,vue,html,md,json,jsonc,yaml}\" --fix --debug",
+    "lint:stylelint": "stylelint \"**/*.{css,scss,vue,html,xml,svelte,astro,php,md}\"",
+    "lint:stylelint-fix": "stylelint \"**/*.{css,scss,vue,html,xml,svelte,astro,php,md}\" --fix",
     "lint": "pnpm lint:eslint && pnpm lint:stylelint",
     "lint:fix": "pnpm lint:eslint-fix && pnpm lint:stylelint-fix",
     "clear": "pnpm exec -- rm -rf packages/*/node_modules && pnpm exec -- rm -rf node_modules",
@@ -21,15 +23,18 @@
     "release": "bumpp package.json packages/package.json --commit --push --tag && pnpm -r publish "
   },
   "peerDependencies": {
-    "eslint": ">=9.4.0",
-    "stylelint": ">=16.6.1"
+    "eslint": ">=9",
+    "stylelint": ">=16"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
-    "@antfu/eslint-config": "^2.20.0",
+    "@antfu/eslint-config": "^2.23.0",
     "bumpp": "^9.4.1",
-    "eslint": "^9.4.0",
-    "eslint-plugin-format": "^0.1.1",
-    "stylelint": "^16.6.1",
+    "eslint": "^9.7.0",
+    "eslint-plugin-format": "^0.1.2",
+    "stylelint": "^16.7.0",
     "stylelint-config-zzjtnb": "workspace:*"
   }
 }
