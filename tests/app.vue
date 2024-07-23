@@ -11,6 +11,11 @@ const num = 0
 </template>
 
 <style lang="scss" scoped>
+:deep(.cell) {
+  color: red;
+  font-style: italic;
+}
+
 .grid {
   height: 100%;
   font-size: 0;

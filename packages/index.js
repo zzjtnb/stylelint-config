@@ -5,6 +5,7 @@ module.exports = {
     'stylelint-config-idiomatic-order',
     'stylelint-config-standard',
     'stylelint-config-standard-scss',
+    'stylelint-config-recommended-vue/scss',
     'stylelint-config-html',
   ],
   rules: {},

@@ -7,3 +7,5 @@ const list = [
     author: 'zzjtnb(https://github.com/zzjtnb)',
   },
 ]
+
+export default list
