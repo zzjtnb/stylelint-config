@@ -1,0 +1,71 @@
+// SCSS测试文件
+@use 'sass:math';
+
+// 变量定义
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$spacing-unit: 8px;
+
+// UnoCSS层定义
+@layer components {
+  // 混合器定义
+  @mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // 使用UnoCSS的apply
+  .card {
+    @apply p-4 rounded-lg shadow-md;
+
+    background-color: white;
+
+    // 嵌套语法
+    &__header {
+      @include flex-center;
+
+      margin-bottom: $spacing-unit * 2;
+
+      h2 {
+        font-size: 18px;
+        color: $primary-color;
+      }
+    }
+
+    &__body {
+      // 函数使用
+      padding: math.div($spacing-unit * 3, 2);
+
+      p {
+        line-height: 1.5;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+
+    // UnoCSS主题函数
+    &--themed {
+      color: theme('colors.blue.700');
+      background-color: theme('colors.gray.100');
+    }
+
+    // 媒体查询
+    @screen sm {
+      padding: $spacing-unit * 2;
+    }
+  }
+}
+
+// 检测CSS变量定义
+:root {
+  --main-bg-color: #f0f0f0;
+  --custom-text-color: rgba(0, 0, 0, 0.8);
+}
+
+// UnoCSS变体
+.hover\:bg-blue-500:hover {
+  background-color: #3b82f6;
+}

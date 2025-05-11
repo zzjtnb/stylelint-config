@@ -6,15 +6,18 @@
 
 .cell {
   position: relative;
-  display: inline-block;
+
   overflow: hidden;
-  height: 100%;
+  display: inline-block;
+
   box-sizing: border-box;
+  height: 100%;
   padding: 0 10px;
   border: 2px solid #333;
+
   font-size: 16px;
-  vertical-align: top;
   white-space: normal;
+  vertical-align: top;
 }
 
 .cell.is-animating {

@@ -23,14 +23,13 @@
     "index.js"
   ],
   "peerDependencies": {
-    "stylelint": ">=16"
+    "stylelint": "~16.19.1"
   },
   "dependencies": {
-    "postcss-markdown": "^1.2.0",
+    "stylelint-config-clean-order": "^7.0.0",
     "stylelint-config-html": "^1.1.0",
-    "stylelint-config-idiomatic-order": "^10.0.0",
-    "stylelint-config-recommended-vue": "^1.5.0",
-    "stylelint-config-standard": "^36.0.0",
-    "stylelint-config-standard-scss": "^13.1.0"
+    "stylelint-config-recommended-vue": "^1.6.0",
+    "stylelint-config-standard": "^38.0.0",
+    "stylelint-config-standard-scss": "^15.0.0"
   }
 }

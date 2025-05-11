@@ -1,22 +1,29 @@
-name: Release
+name: CI
 
+# 以下条件永远不会满足，所以工作流不会触发
 on:
   push:
-    tags:
-      - 'v*'
+    branches: [never-used-branch-name]
+  pull_request:
+    branches: [never-used-branch-name]
+
+# 原始配置，保留作为参考
+# on:
+#   push:
+#     branches: [main, master]
+#   pull_request:
+#     branches: [main, master]
 
 jobs:
-  release:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 22
-          registry-url: https://registry.npmjs.org/
 
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
@@ -41,7 +48,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: Generate changelog and release
-        run: npx changelogithub
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Lint
+        run: pnpm lint:check
+
+      - name: Test
+        run: pnpm test

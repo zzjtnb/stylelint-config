@@ -1,0 +1,72 @@
+/* UnoCSS特定测试 */
+
+/* 基本层定义 */
+@layer base {
+  body {
+    @apply font-sans text-base;
+  }
+}
+
+/* 组件层 */
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded;
+  }
+
+  .btn-primary {
+    @apply bg-blue-500 text-white;
+  }
+}
+
+/* 变体层 */
+@variants hover, focus {
+  .btn-outline {
+    @apply ring-2 ring-current;
+  }
+}
+
+/* 应用层 */
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+}
+
+/* 媒体查询 */
+@screen sm {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@screen md {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* 容器查询 */
+@container-queries {
+  @container (min-width: 400px) {
+    .card {
+      padding: 2rem;
+    }
+  }
+}
+
+/* 主题函数测试 */
+.themed-element {
+  margin: theme('spacing.4');
+  font-family: theme('fontFamily.sans');
+  color: theme('colors.gray.900');
+  background-color: theme('colors.blue.100');
+}
+
+/* UnoCSS特殊变体 */
+.uno:p-4 {
+  padding: 1rem;
+}
+
+.uno-layer:base {
+  background: white;
+}

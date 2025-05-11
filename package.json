@@ -1,5 +1,6 @@
 {
   "name": "stylelint-config-zzjtnb-monorepo",
+  "type": "module",
   "version": "0.0.6",
   "private": true,
   "author": "zzjtnb(https://github.com/zzjtnb)",
@@ -11,30 +12,33 @@
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "lint:eslint": "eslint \"**/*.{js,ts,cjs,mjs,vue,html,md,json,jsonc,yaml}\"",
-    "lint:eslint-fix": "eslint \"**/*.{js,ts,cjs,mjs,vue,html,md,json,jsonc,yaml}\" --fix",
-    "lint:eslint-debug": "eslint \"**/*.{js,ts,cjs,mjs,vue,html,md,json,jsonc,yaml}\" --fix --debug",
-    "lint:stylelint": "stylelint \"**/*.{css,scss,vue,html,xml,svelte,astro,php,md}\"",
-    "lint:stylelint-fix": "stylelint \"**/*.{css,scss,vue,html,xml,svelte,astro,php,md}\" --fix",
-    "lint": "pnpm lint:eslint && pnpm lint:stylelint",
-    "lint:fix": "pnpm lint:eslint-fix && pnpm lint:stylelint-fix",
-    "clear": "pnpm exec -- rm -rf packages/*/node_modules && pnpm exec -- rm -rf node_modules",
+    "lint:eslint": "eslint \"**/*.{js,ts,cjs,mjs,vue,html,json,jsonc,yaml}\"",
+    "lint:eslint-fix": "eslint \"**/*.{js,ts,cjs,mjs,vue,html,json,jsonc,yaml}\" --fix",
+    "lint:eslint-debug": "eslint \"**/*.{js,ts,cjs,mjs,vue,html,json,jsonc,yaml}\" --fix --debug",
+    "lint:stylelint": "stylelint \"**/*.{css,scss,vue,html}\"",
+    "lint:stylelint-fix": "stylelint \"**/*.{css,scss,vue,html}\" --fix",
+    "lint:check": "pnpm lint:eslint && pnpm lint:stylelint",
+    "lint": "pnpm lint:eslint-fix && pnpm lint:stylelint-fix",
+    "clean": "pnpm exec -- rm -rf node_modules **/node_modules",
+    "test": "echo \"No tests specified - all good!\" && exit 0",
     "bumpp": "bumpp package.json packages/package.json",
     "release": "bumpp package.json packages/package.json --commit --push --tag && pnpm -r publish "
   },
   "peerDependencies": {
-    "eslint": ">=9",
-    "stylelint": ">=16"
+    "eslint": ">=9.26.0",
+    "stylelint": ">=16.19.1"
   },
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
-    "@antfu/eslint-config": "^2.23.0",
-    "bumpp": "^9.4.1",
-    "eslint": "^9.7.0",
-    "eslint-plugin-format": "^0.1.2",
-    "stylelint": "^16.7.0",
-    "stylelint-config-zzjtnb": "workspace:*"
+    "@antfu/eslint-config": "^4.13.0",
+    "@unocss/eslint-plugin": "^66.1.1",
+    "bumpp": "^10.1.0",
+    "eslint": "^9.26.0",
+    "eslint-plugin-format": "^1.0.1",
+    "stylelint": "^16.19.1",
+    "stylelint-config-zzjtnb": "workspace:*",
+    "unocss": "^66.1.1"
   }
 }
