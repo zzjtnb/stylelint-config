@@ -21,8 +21,7 @@
     "lint": "pnpm lint:eslint-fix && pnpm lint:stylelint-fix",
     "clean": "pnpm exec -- rm -rf node_modules **/node_modules",
     "test": "echo \"No tests specified - all good!\" && exit 0",
-    "bumpp": "bumpp package.json packages/package.json",
-    "release": "bumpp package.json packages/package.json --commit --push --tag && pnpm -r publish "
+   "release": "bumpp package.json packages/package.json --commit --push --tag && pnpm -r publish --registry https://registry.npmjs.org/"
   },
   "peerDependencies": {
     "eslint": ">=9.26.0",
@@ -32,13 +31,13 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@antfu/eslint-config": "^4.13.0",
-    "@unocss/eslint-plugin": "^66.1.1",
-    "bumpp": "^10.1.0",
-    "eslint": "^9.26.0",
-    "eslint-plugin-format": "^1.0.1",
-    "stylelint": "^16.19.1",
+    "@antfu/eslint-config": "^6.0.0",
+    "@unocss/eslint-plugin": "^66.5.4",
+    "bumpp": "^10.3.1",
+    "eslint": "^9.38.0",
+    "eslint-plugin-format": "^1.0.2",
+    "stylelint": "^16.25.0",
     "stylelint-config-zzjtnb": "workspace:*",
-    "unocss": "^66.1.1"
+    "unocss": "^66.5.4"
   }
 }

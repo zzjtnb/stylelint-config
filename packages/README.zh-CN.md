@@ -1,62 +1,134 @@
-# stylelint-config-zzjtnb
+<h1 align="center">stylelint-config-zzjtnb</h1>
 
-[![npm](https://img.shields.io/npm/v/stylelint-config-zzjtnb?color=a1b858&label=)](https://npmjs.com/package/stylelint-config-zzjtnb)
+<p align="center">
+  <a href="https://npmjs.com/package/stylelint-config-zzjtnb"><img src="https://img.shields.io/npm/v/stylelint-config-zzjtnb?color=a1b858&label=npm" alt="npm version"></a>
+  <a href="https://npmjs.com/package/stylelint-config-zzjtnb"><img src="https://img.shields.io/npm/dm/stylelint-config-zzjtnb?color=50a8d8" alt="npm downloads"></a>
+  <a href="https://github.com/zzjtnb/stylelint-config/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/stylelint-config-zzjtnb?color=blue" alt="license"></a>
+  <a href="https://github.com/zzjtnb/stylelint-config"><img src="https://img.shields.io/github/stars/zzjtnb/stylelint-config?style=social" alt="GitHub stars"></a>
+</p>
 
-**简体中文 | [English](/packages/README.md)**
+<p align="center">
+  <strong>简体中文 | <a href="/packages/README.md">English</a></strong>
+</p>
 
-> 一个平衡各方面需求的Stylelint配置，专为现代CSS、SCSS、Vue 3和UnoCSS设计。
+<p align="center">
+  <strong>✨ 强大而优雅的 Stylelint 配置 ✨</strong>
+</p>
 
-## 功能特点
+<p align="center">
+  <em>专为 Vue 3、SCSS 和 UnoCSS 现代化工作流精心打造</em>
+</p>
 
-- 基于`stylelint-config-standard`和`stylelint-config-standard-scss`标准配置
-- 支持Vue单文件组件中的SCSS样式（扩展`stylelint-config-recommended-vue/scss`）
-- 支持HTML文件中的样式（扩展`stylelint-config-html`）
-- 采用`stylelint-config-clean-order`进行逻辑属性分组和排序
-- 完全兼容UnoCSS和TailwindCSS
-- 为现代开发提供合理的默认设置
+<br>
 
-## 安装
+<p align="center">
+  <a href="#-功能特点">功能特点</a> •
+  <a href="#-依赖要求">依赖要求</a> •
+  <a href="#-安装">安装</a> •
+  <a href="#-使用方法">使用方法</a> •
+  <a href="#-自定义配置">自定义配置</a>
+</p>
+
+<br>
+
+## ✨ 功能特点
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+🎨 <strong>现代 CSS 支持</strong>
+
+- ✅ 最新 CSS 标准和最佳实践
+- 🎯 逻辑化属性排序
+- 🧹 整洁一致的代码风格
+- 🚀 性能优化
+
+</td>
+<td width="50%" valign="top">
+
+🔥 <strong>框架兼容</strong>
+
+- 💚 Vue 3 SFC `<style>` 块
+- 🎨 SCSS/Sass 语法支持
+- ⚡ UnoCSS & Tailwind 友好
+- 📄 HTML 内联样式
+
+</td>
+</tr>
+</table>
+
+🛠️ <strong>坚实的基础</strong>
+
+| 包 | 用途 |
+|---------|---------|
+| `stylelint-config-standard` | CSS 最佳实践 |
+| `stylelint-config-standard-scss` | SCSS/Sass 支持 |
+| `stylelint-config-recommended-vue` | Vue 3 SFC 支持 |
+| `stylelint-config-html` | HTML 内联样式 |
+| `stylelint-config-clean-order` | 逻辑属性排序 |
+
+## 📋 依赖要求
+
+| 包 | 版本 | 兼容性 |
+|---------|---------|---------------|
+| **Stylelint** | `>=16.19.1` | ✅ 兼容所有 16.x 及更高版本 |
+
+## 📦 安装
 
 ```bash
-# npm
-npm install stylelint-config-zzjtnb --save-dev
+# 📦 npm
+npm install stylelint stylelint-config-zzjtnb -D
 
-# yarn
-yarn add stylelint-config-zzjtnb -D
+# 🧶 yarn
+yarn add stylelint stylelint-config-zzjtnb -D
 
-# pnpm
-pnpm add stylelint-config-zzjtnb -D
+# 🚀 pnpm（推荐）
+pnpm add stylelint stylelint-config-zzjtnb -D
 ```
 
-## 使用方法
+> [!TIP]
+> 确保 `stylelint` 版本 `>=16.19.1` 以获得最佳体验！
 
-在`.stylelintrc.js`文件中添加以下内容：
+## 🚀 使用方法
+
+在项目根目录创建 `.stylelintrc.js` 文件：
+
+<strong>CommonJS</strong>
 
 ```js
 module.exports = {
   extends: ['stylelint-config-zzjtnb'],
   rules: {
-    // 你的自定义规则（可选）
+    // 🎨 在这里添加你的自定义规则（可选）
   }
 }
 ```
 
-如果你使用ESM：
+<strong>ESM</strong>
 
 ```js
 export default {
   extends: ['stylelint-config-zzjtnb'],
   rules: {
-    // 你的自定义规则（可选）
+    // 🎨 在这里添加你的自定义规则（可选）
   }
 }
 ```
 
-### VS Code推荐设置
+> [!NOTE]
+> 就这么简单！🎉 现在你的样式已经受到全面的 lint 保护了。
 
-1. 安装[Stylelint扩展](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+### 💻 VS Code 推荐设置
 
-2. 在`.vscode/settings.json`中添加以下配置：
+<details>
+<summary>🔧 点击展开 VS Code 配置</summary>
+
+<br>
+
+**步骤 1：** 安装官方 [Stylelint 扩展](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+
+**步骤 2：** 在 `.vscode/settings.json` 中添加以下配置：
 
 ```json
 {
@@ -69,54 +141,122 @@ export default {
 }
 ```
 
-## 包含内容
+> [!TIP]
+> 现在享受保存时自动格式化的便利！🎉
 
-该配置：
+</details>
 
-- 使用`stylelint-config-clean-order`进行逻辑CSS属性分组和排序（放置在extends数组的最后，确保排序规则不被其他配置覆盖）
-- 禁用属性组之间的额外空行（通过设置`declaration-empty-line-before`和`at-rule-empty-line-before`为`never`）
-- 扩展了CSS和SCSS的官方标准
-- 支持Vue单文件组件样式，具有正确的语法检测
-- 针对UnoCSS和现代CSS功能优化了规则
-- 允许使用常见的CSS容器、at规则和嵌套功能
-- 支持最新的CSS伪类和伪元素
+## 📖 包含内容
 
-### 自定义属性排序
+<details>
+<summary>🎯 点击展开完整功能列表</summary>
 
-默认情况下，我们使用`stylelint-config-clean-order`进行逻辑CSS属性分组和排序。该插件会尝试在属性组之间添加额外的空行，但我们的配置通过以下设置禁用了这种行为：
+<br>
 
-```js
-'declaration-empty-line-before': 'never',
-'at-rule-empty-line-before': 'never'
+🧩 <strong>配置亮点</strong>
+
+| 功能 | 说明 |
+|------|------|
+| 🎨 属性排序 | 通过 `stylelint-config-clean-order` 进行逻辑分组 |
+| 🧹 整洁格式 | 属性组之间无多余空行 |
+| 📐 标准规则 | 内置官方 CSS & SCSS 标准 |
+| 💚 Vue 支持 | SFC `<style>` 块的正确语法检测 |
+| ⚡ 现代 CSS | UnoCSS、Tailwind、容器查询、嵌套 |
+| 🎭 伪元素 | 最新的 CSS 伪类和伪元素 |
+| 🔧 可定制 | 易于扩展自定义规则 |
+
+🎨 <strong>智能默认值示例</strong>
+
+```css
+/* ✅ 属性会自动按逻辑顺序排列 */
+.component {
+  /* 定位 */
+  position: relative;
+  top: 0;
+
+  /* 盒模型 */
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+
+  /* 排版 */
+  font-size: 1rem;
+  color: #333;
+
+  /* 视觉 */
+  background: white;
+  border-radius: 8px;
+}
 ```
 
-如果你想启用这些额外的空行，可以在你的配置中覆盖这些规则。
+</details>
 
-## 特性详解
+## 🎨 自定义配置
 
-### Vue 3支持
+<details>
+<summary>⚙️ 调整属性间距</summary>
 
-- 完整支持Vue 3 `<script setup>`和组合式API
-- 支持CSS变量绑定`v-bind()`
-- 支持深度选择器`::v-deep`和插槽选择器`::v-slotted`
-- 支持安全区域函数`v-safe-area-inset-*`
+<br>
 
-### UnoCSS支持
+默认情况下，我们通过移除属性组之间的额外空行，让你的代码**紧凑整洁**。
 
-- 完整支持`@apply`、`@screen`、`@layer`等指令
-- 支持`theme()`函数和动态主题变量
-- 支持UnoCSS属性选择器和特殊伪类
-- 支持容器查询`@container-queries`
-- 放宽命名规则，允许使用原子类名
+如果你更喜欢**带间距**的属性，可以在配置中添加：
 
-### SCSS优化
+```js
+module.exports = {
+  extends: ['stylelint-config-zzjtnb'],
+  rules: {
+    'declaration-empty-line-before': 'always',
+    'at-rule-empty-line-before': 'always',
+  }
+}
+```
 
-- 支持复杂嵌套和Sass内置模块
-- 放宽混合器和变量命名限制
-- 允许使用各种颜色函数格式
-- 支持SCSS运算符和函数
-- 支持CSS新的嵌套语法特性
+</details>
 
-## 许可证
+<details>
+<summary>🎯 覆盖任何规则</summary>
 
-[MIT 许可证](LICENSE) &copy; 2022 [争逐](https://zzjtnb.com)
+<br>
+
+```js
+module.exports = {
+  extends: ['stylelint-config-zzjtnb'],
+  rules: {
+    // 关闭特定规则
+    'color-hex-length': null,
+
+    // 调整规则严重性
+    'declaration-block-no-duplicate-properties': 'warning',
+
+    // 配置规则选项
+    'selector-max-id': [1, { severity: 'warning' }],
+  }
+}
+```
+
+> [!NOTE]
+> 查看 [Stylelint 规则文档](https://stylelint.io/user-guide/rules/) 了解所有可用选项。
+
+</details>
+
+## 💖 为什么选择这个配置？
+
+| | | |
+|:---:|---|---|
+| ⚡ | **快速设置** | 一行安装，零配置启动 |
+| 🎯 | **有主见** | 基于实际使用精心打造的默认配置 |
+| 🔧 | **灵活** | 易于根据需求自定义和扩展 |
+| 🌟 | **现代化** | 为 Vue 3、UnoCSS 和前沿 CSS 而构建 |
+
+## 📄 许可证
+
+[MIT 许可证](LICENSE) &copy; 2022-PRESENT [争逐](https://zzjtnb.com)
+
+<br>
+
+<p align="center">
+  <sub>用 ❤️ 制作 by <a href="https://github.com/zzjtnb">@zzjtnb</a></sub>
+  <br>
+  <sub>如果这个项目对你有帮助，不妨<a href="https://github.com/zzjtnb/stylelint-config">给个 ⭐️</a></sub>
+</p>
