@@ -1,7 +1,7 @@
 {
   "name": "stylelint-config-zzjtnb-monorepo",
   "type": "module",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "private": true,
   "author": "zzjtnb(https://github.com/zzjtnb)",
   "license": "MIT",
